@@ -32,7 +32,7 @@ TRACE_FILE_BOOL = False
 Join_channel = "Join : https://t.me/+53k_M8_xKcE3NmI1".replace("_", "\\_")
 # Channel IDs
 PRIVATE_CHANNEL_ID = -1002377701369  # Private channel ID
-PUBLIC_CHANNEL_ID = -1002253146678  # Public channel ID
+PUBLIC_CHANNEL_ID = -1002584737841  # Public channel ID
 BOT_USERNAME = "ShadowWorld_Filebot"
 
 # User API keys for URL shortener
