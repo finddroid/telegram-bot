@@ -62,7 +62,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
                 caption = file_info.get("caption", "")
                 await update.message.reply_document(
                     document=file_info["file_id"],
-                    caption=f"Here is your file: `{file_info['file_name']}`\n{caption}\n\n{Join_channel}",
+                    caption=f"Here is your file: {file_info['file_name']}\n{caption}\n\n{Join_channel}",
                     parse_mode="Markdown",
                 )
         else:
@@ -99,7 +99,7 @@ async def check_and_send_file_group(user_name, sender_id, context, main_caption)
         # Send grouped file message
         await context.bot.send_message(
             chat_id=PUBLIC_CHANNEL_ID,
-            text=f"{Join_channel}\n\n 📁 **New File Group Added!**\n\n{main_caption}\n\n📂 Files: {len(file_groups[sender_id])} items\n\n🔗 [Click here]({link}) to get the files.\n\nNOTE : Open link in Chrome or Other browser.",
+            text=f"{Join_channel}  \n\n 📁 **New File Group Added!**\n\n{main_caption}\n\n📂 Files: {len(file_groups[sender_id])} items\n\n🔗 [Click here]({link}) to get the files.\n\nNOTE : Open link in Chrome or Other browser.",
             parse_mode="Markdown",
             disable_web_page_preview=True,
         )
