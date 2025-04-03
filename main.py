@@ -184,11 +184,11 @@ async def handle_file(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 if message.document:
                     file_name = message.document.file_name
                     file_id = message.document.file_id
-                    main_caption += message.caption or ""
+                    main_caption = message.caption or ""
                 elif message.video:
                     file_name = "video.mp4"
                     file_id = message.video.file_id
-                    main_caption += message.caption or ""
+                    main_caption = message.caption or ""
                 elif message.photo:
                     await context.bot.send_photo(
                         chat_id=PUBLIC_CHANNEL_ID,
