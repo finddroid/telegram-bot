@@ -159,7 +159,15 @@ async def check_and_send_file_group(user_name, sender_id, context, main_caption)
         # Send grouped file message
         await context.bot.send_message(
             chat_id=PUBLIC_CHANNEL_ID,
-            text=f"{Join_channel}\n\n 📁 **New File Group Added!**\n\n{main_caption}\n\n📂 Files: {len(file_groups[sender_id])} items\n\n🔗 [Click here]({link}) to get the files.\n\nNOTE : Open link in Chrome or Other browser.",
+            text = (
+                f"{Join_channel}\n\n"
+                "📁 **New File Group Added!**\n\n"
+                f"{main_caption}\n\n"
+                f"📂 Files: {len(file_groups[sender_id])} items\n\n"
+                f"🔗 [Click here]({link}) to get the files.\n\n"
+                "📽️ [How to open the link (Watch Video)](https://t.me/ShadowWorld_Filebot?start=bec4001b-8f24-403e-862e-ac4f533ed785)\n\n"
+                "📝 NOTE: Open the link in Chrome or any other browser."
+            ),
             parse_mode="Markdown",
             disable_web_page_preview=True,
         )
